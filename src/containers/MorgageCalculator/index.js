@@ -4,6 +4,7 @@ import './MorgageCalculator.css';
 import { TextInput } from '../../components/TextInput';
 import { SelectInput } from '../../components/SelectInput';
 
+// Create the object needed for the amortization select
 const AMORTIZATION = () => {
   let result = [];
   for (var index = 0; index < 30; index++) {
@@ -34,14 +35,16 @@ const AMORTIZATION = () => {
 //   { value:"10", label: '10 Years' }
 // ];
 
+// Container
 const MorgageCalculator = () => {
+  // My inputs states 
   const [mortgageAmount, setMortgageAmount] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
   const [prepaymentAmount, setPrepaymentAmount] = useState(0);
   const [amortizationPeriod, setAmortizationPeriod] = useState(0);
   const [monthlyPayment, setMonthlyPayment] = useState(null);
 
-
+  // My mortgage calculation function, called on submit
   const handleOnSubmit = (e) => {
     const realMortgageAmount = mortgageAmount - prepaymentAmount
 
@@ -78,6 +81,7 @@ const MorgageCalculator = () => {
           </div>
         </form>
       </div>
+      {/* If Monthly payment is calculated, show the result, otherwise, only the form is shown */}
       {monthlyPayment &&
         <div>
           <h2>Calculation Summary</h2>

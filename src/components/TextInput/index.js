@@ -6,6 +6,7 @@ export const TextInput = ({
   value,
   handleOnChange,
 }) => {
+  // the prop "type" will indicate the format of the input
   const renderInput = () => {
     if (type === 'cash') {
       return (

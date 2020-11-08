@@ -5,6 +5,7 @@ export const SelectInput = ({
   handleOnChange,
   options,
 }) => {
+  // Loop through the prop "options" to generate the select options
   const renderOptions = () => {
     return options.map(option => (
       <option key={option.value} value={option.value} label={option.label} />
