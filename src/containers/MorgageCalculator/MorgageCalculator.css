@@ -1,0 +1,15 @@
+.mortgageCalculator {
+  padding: 0 5%;
+}
+.mortgageCalculator .form {
+  display: flex;
+}
+.mortgageCalculator .form .half{
+  width: 40%;
+  min-width: 300px;
+  display: inline-block;
+}
+.mortgageCalculator .submitButton {
+  padding: 3% 0;
+}
+
